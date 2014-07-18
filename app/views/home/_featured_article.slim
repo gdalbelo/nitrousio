@@ -1,0 +1,5 @@
+- if defined?(featured_article)
+  article.featured
+    = link_to [featured_article.category, featured_article] do
+      = img featured_article.image.small if featured_article.image?
+      h2 = featured_article.title

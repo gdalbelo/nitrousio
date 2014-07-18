@@ -1,0 +1,167 @@
+body
+  background-color: $body-background
+  font-family: $helvetica
+
+a
+  color: #7e60d0
+
+// Fluid medias
+// ----------------------------------------/
+img, embed, object, video
+  // Responsive images (ensure images don't scale beyond their parents)
+  max-width: 100%  // Part 1: Set a maxium relative to the parent
+  width: auto\9    // IE7-8 need help adjusting responsive images
+  height: auto     // Part 2: Scale the height according to the width, otherwise you get stretching
+  vertical-align: middle
+  border: 0
+  -ms-interpolation-mode: bicubic
+
+
+=debug
+  background-color: rgba(red, .3)
+
+// COLORS
+@each $theme in $themes
+  body.#{nth($theme, 1)}
+    #page-header
+      &:before
+        background: #{nth($theme, 2)}
+      #page-nav
+        li.#{nth($theme, 1)} a
+          color: #{nth($theme, 2)}
+
+  .#{nth($theme, 1)}
+    article.entry h1
+      color: #{nth($theme, 2)}
+
+    &.category h1, .category
+      background-color: #{nth($theme, 2)}
+
+    a
+      color: #{nth($theme, 2)}
+      // &:hover
+      //   color: darken(#{nth($theme, 2)}, 10%)
+
+  nav#page-nav
+    li.#{nth($theme, 1)} a:hover
+      color: #{nth($theme, 2)}
+
+
+
+%container
+  +outer-container
+
+.container
+  @extend %container
+
+
+%category-title
+  font-size: em(15)
+  text-transform: uppercase
+  font-weight: $semibold
+  +inline-block
+  color: white
+  margin: 0
+  padding: em(4) em(8)
+  text-shadow: none
+
+.send-news
+  .send-news-inner
+    @extend %container
+    margin-top: 30px
+    background-color: #f0f0f0
+    text-align: center
+    font-size: 22px
+    font-weight: $bold
+    color: #333
+
+    a
+      font-weight: $regular
+      +inline-block
+      padding-left: 10px
+      color: #666
+
+      &:hover
+        color: black
+
+
+section.latest-articles
+  .latest-articles-inner
+    @extend %container
+
+    article
+      +span-columns(6)
+
+      &:nth-child(2n+1)
+        +omega
+      margin-bottom: 20px
+
+  a
+    text-decoration: none
+    display: block
+    background-color: white
+    padding: 15px
+    +clearfix
+
+    &:hover
+      background-color: #fefef0
+
+  h1
+    text-transform: uppercase
+    font-size: em(15)
+    font-weight: $semibold
+
+  h2
+    font-size: em(18)
+    line-height: em(18)
+    margin: 0
+    padding: 0 0 5px 0
+    font-weight: $semibold
+
+  p
+    font-size: em(14)
+    color: #999
+    margin: 0
+    padding: 0
+
+  img
+    float: left
+    margin-right: 15px
+
+fieldset
+  border: none
+  margin: 20px 0 0 0
+  padding: 0
+input, textarea
+  width: 100%
+  border: 2px solid #b2b2b2
+  border-radius: 2px
+  background-color: white
+  font-size: 17px
+  font-weight: $light
+  padding: 8px
+  &:focus
+    outline: none
+.form-group
+  padding-bottom: 10px
+
+button
+  @extend %normalise-button
+  background-color: #333
+  text-transform: uppercase
+  color: white
+  border-radius: 3px
+  font-size: 20px
+  font-weight: $bold
+  padding: 20px 40px !important
+
+%normalise-button
+  margin: 0
+  padding: 0
+  outline: 0
+  border: none
+  text-decoration: none
+  text-align: center
+  cursor: pointer
+  vertical-align: middle
+  display: inline-block

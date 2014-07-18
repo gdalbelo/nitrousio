@@ -1,0 +1,64 @@
+- @page_class= 'noticias type-section'
+- @title= 'Notícias'
+
+section#featured-article
+  article.noticias
+    = image_tag 'temp/featured-section.jpg', onload: "this.parentNode.style.backgroundImage = 'url('+this.src+')'"
+    .article-inner
+      = link_to '#' do
+        .category Notícias
+        h1 Longboard é a nova onda entre os jovens de Brasília
+
+section.latest-articles
+  .latest-articles-inner
+    h1 Últimas notícias
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+    article
+      = link_to '#' do
+        = image_tag 'temp/thumb.jpg', width: 90, height: 80
+        h2 Vá de bike Donec id elit non mi porta gravida at eget metus...
+        p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectet...
+
+= render 'shared/send_news'

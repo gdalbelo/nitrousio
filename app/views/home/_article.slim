@@ -1,0 +1,4 @@
+article
+  = link_to [article.category, article] do
+    = img article.image.thumb if article.image?
+    h2 = article.title

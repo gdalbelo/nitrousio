@@ -1,0 +1,9 @@
+header#page-header
+  #page-header-inner
+    #logo
+      = link_to 'Paporeto.com', root_path
+
+    nav#page-nav
+      ul
+        - @categories.each do |category|
+          li class="#{category.name.parameterize}" = link_to category.name, category_articles_path(category)

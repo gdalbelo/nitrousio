@@ -1,0 +1,13 @@
+h1 
+  = @article.title
+  .pull-right
+    = link_to 'Editar', edit_admin_article_path(@article), class: 'btn btn-default'
+
+p = @article.summary
+hr
+
+strong = @article.category.name
+p = l @article.published_at
+
+p = img @article.image.regular if @article.image?
+= simple_format @article.body

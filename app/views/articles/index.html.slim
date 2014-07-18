@@ -1,0 +1,13 @@
+- @page_class= "#{@category.slug} type-section"
+- @title= @category.name
+
+section#featured-article
+  = render partial: 'featured_article', object: @featured_article
+
+section.latest-articles
+  .latest-articles-inner
+    h1 Últimas notícias
+
+    = render @articles
+
+= render 'shared/send_news'

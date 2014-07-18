@@ -1,0 +1,15 @@
+= simple_form_for([:admin, @article]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.uploads_one :image, preview: :regular
+    = f.input :title
+    = f.input :summary
+    = f.association :category, prompt: 'Selecione'
+    = f.input :body
+    = f.input :published_at
+    = f.input :featured
+    = f.input :featured_at_home
+
+  .form-actions
+    = f.button :submit, class: 'btn btn-primary'

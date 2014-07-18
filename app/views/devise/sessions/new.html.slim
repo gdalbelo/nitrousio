@@ -1,0 +1,19 @@
+.row.vertical-offset-100
+  .col-md-4.col-md-offset-4
+    .panel.panel-default
+      .panel-heading
+        h2 Paporeto
+      .panel-body
+        - if alert
+          .alert.alert-warning.alert-dismissable
+            button type="button" class="close" data-dismiss="alert" aria-hidden="true" &times; 
+            = alert
+
+        = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {autocomplete: 'off'}) do |f|
+          .form-inputs
+            = f.input :email, :required => false, label: false, placeholder: 'Email', :autofocus => true
+            = f.input :password, :required => false, label: false, placeholder: 'Senha'
+            = f.input :remember_me, :as => :boolean, label: 'Lembrar' if devise_mapping.rememberable?
+          .form-actions
+            = f.button :submit, "Entrar", class: 'btn btn-lg btn-success btn-block'
+    = link_to "Esqueceu a senha?", new_password_path(resource_name)            

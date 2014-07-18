@@ -1,0 +1,7 @@
+- if defined?(featured_article)
+  article class="#{@category.slug}"
+    = img featured_article.image.big, onload: "this.parentNode.style.backgroundImage = 'url('+this.src+')'" if featured_article.image?
+    .article-inner
+      = link_to [@category, featured_article] do
+        .category = @category.name
+        h1 = featured_article.title

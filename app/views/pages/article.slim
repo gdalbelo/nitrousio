@@ -1,0 +1,36 @@
+- @page_class= 'noticias type-section'
+- @title= 'Notícias'
+
+.container
+  #main
+    article.entry role='main'
+      .entry-metadata
+        time 18 de Julho de 2013 às 14h30
+
+      header
+        h1.entry-title Vá de bike Donec id elit non mi porta at eget metus mullam risus.
+        h2.summary Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac.
+
+      .entry-content
+        .photo
+          = image_tag 'temp/featured-section.jpg'
+        p Donec sed odio dui. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.
+        p Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.
+        p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.
+        p Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia qam venenatis vestibulum.
+
+  #sidebar
+    section#more-articles
+      section.category
+        h1 Notícias
+        article.featured
+          = link_to do
+            h2 Skateboarding Aenean eu leo quam. Pellentesque ornare sem lacinia.
+        article
+          = link_to do
+            h2 Standup Pedal non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec.
+        article
+          = link_to do
+            h2 Standup Pedal non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec.
+
+    = render 'shared/send_news'

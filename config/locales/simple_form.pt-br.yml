@@ -1,0 +1,39 @@
+pt-BR:
+  simple_form:
+    yes: Sim
+    no: Não
+    required:
+      text: obrigatório
+      mark: "*"
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: "<abbr title="required">*</abbr>"
+    error_notification:
+      default_message: "Por favor, corrija os problemas abaixo:"
+    # Labels and hints examples
+    labels:
+      defaults:
+        password: Senha
+        password_confirmation: Confirmar a Senha
+        name: Nome
+      article:
+        title: Título
+        body: Texto
+        published_at: Publicado em
+        category: Categoria
+        featured: Destaque
+        featured_at_home: Destaque na Home
+    # hints:
+    #   defaults:
+    #     password: 'Mínimo de 8 caracteres.'
+    # placeholders:
+    #   defaults:
+    #     name: 'Nome'
+    #     password: '****'
+  helpers:
+    submit:
+      create: 'Criar'
+      update: 'Editar'
+      article:
+        create: 'Criar artigo'
+        update: 'Editar artigo'

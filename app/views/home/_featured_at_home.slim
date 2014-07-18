@@ -1,0 +1,7 @@
+- if defined?(featured_at_home)
+  article class="#{featured_at_home.category.slug}"
+    = img featured_at_home.image.full, onload: "this.parentNode.style.backgroundImage = 'url('+this.src+')'" if featured_at_home.image?
+    .article-inner
+      = link_to [featured_at_home.category, featured_at_home] do
+        .category = featured_at_home.category.name
+        h1 = featured_at_home.title

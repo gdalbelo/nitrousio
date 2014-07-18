@@ -1,0 +1,29 @@
+h1 Artigos
+
+table.table.table-striped
+  thead
+    tr
+      th Título
+      th Publicado em
+      th Categoria
+      th Destaque
+      th Home
+      th
+
+  tbody
+    - @articles.each do |article|
+      tr
+        td = article.title
+        td = l article.published_at
+        td = article.category.name
+        td = article.featured ? 'Sim' : 'Não'
+        td = article.featured_at_home ? 'Sim' : 'Não'
+        td
+          .btn-group.pull-right
+            = link_to 'Ver', [:admin, article], class: 'btn btn-default btn-sm'
+            = link_to 'Editar', edit_admin_article_path(article), class: 'btn btn-default btn-sm'
+            = link_to 'Excluir', [:admin, article], :confirm => 'Tem certeza?', :method => :delete, class: 'btn btn-default btn-sm'
+
+br
+
+= link_to 'Criar Artigo', new_admin_article_path, class: 'btn btn-primary'

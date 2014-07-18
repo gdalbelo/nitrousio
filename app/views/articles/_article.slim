@@ -1,0 +1,5 @@
+article
+  = link_to [@category, article] do
+    = img article.image.thumb if article.image?
+    h2 = article.title
+    p = truncate(article.summary, length: 80)

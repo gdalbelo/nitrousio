@@ -1,0 +1,6 @@
+section.category class="#{category.slug}"
+  = link_to category_articles_path(category) do
+    h1 = category.name
+
+  = render partial: 'home/featured_article', object: category.featured_article
+  = render partial: 'home/article', collection: category.articles.limit(3)

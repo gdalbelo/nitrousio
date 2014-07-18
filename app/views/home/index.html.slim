@@ -1,0 +1,9 @@
+- @page_class= 'home'
+
+section#featured-article
+  = render partial: 'home/featured_at_home', object: @featured_at_home
+
+section#more-articles
+  = render partial: 'home/category', collection: @categories
+
+= render 'shared/send_news'

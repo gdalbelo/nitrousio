@@ -1,0 +1,28 @@
+- @page_class= "#{@category.slug} type-section"
+- @title= @category.name
+
+.container
+  #main
+    article.entry role='main'
+      .entry-metadata
+        time = l @article.published_at, format: :long
+
+      header
+        h1.entry-title = @article.title
+        h2.summary = @article.summary
+
+      .entry-content
+        - if @article.image?
+          .photo
+            = img @article.image.regular
+
+        = simple_format @article.body
+
+  #sidebar
+    section#more-articles
+      section.category
+        h1 = @category.name
+
+        = render partial: 'related_article', collection: @related_articles
+
+    = render 'shared/send_news'

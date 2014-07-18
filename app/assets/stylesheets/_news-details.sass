@@ -1,0 +1,50 @@
+#main
+  +span-columns(9 of 12)
+
+article.entry
+  background-color: white
+  padding: 60px
+  .entry-metadata
+    time
+      font-weight: bold
+      font-size: em(11)
+      color: #999
+
+  header
+    border-bottom: 1px solid #e5e5e5
+    padding-bottom: em(20)
+    margin-bottom: em(20)
+
+    h1, h2
+      margin: 0
+      padding: 0
+    h1
+      font-size: em(32)
+      line-height: em(16)
+      margin-top: em(10)
+    h2
+      font-weight: $light
+      font-size: em(17)
+      line-height: em(18)
+      margin-top: em(10)
+      color: #888
+
+  .entry-content
+    font-size: em(15)
+    line-height: em(22)
+    color: #666
+    p
+      font-weight: $light
+
+
+
+#sidebar
+  +span-columns(3 of 12)
+
+  section.category
+    +fill-parent
+    background-color: transparent
+  h1
+    color: black
+    padding: 0
+

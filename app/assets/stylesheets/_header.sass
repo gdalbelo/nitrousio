@@ -1,0 +1,55 @@
+#page-header
+  position: relative
+  min-height: 105px
+  z-index: 1000
+  background-color: #f6f6f6
+  background-color: rgba(#f6f6f6, .95)
+
+  &:before
+    content: ''
+    $bp: ($noticias-color 15%, $esportes-color 30%, $entretenimento-color 45%, $noticias-color 60%, $esportes-color 75%, $entretenimento-color 90%, $noticias-color 100%)
+    +background-image(stripes($bp, to right))
+    height: 3px
+    width: 100%
+    display: block
+
+#page-header-inner
+  @extend %container
+
+  #logo
+    +span-columns(3 of 12)
+    a
+      +retina-image(logo, 148px 23px)
+      display: block
+      width: 148px
+      height: 23px
+      +hide-text
+      margin: 41px 0 0 0
+      opacity: .3
+      &:hover
+        opacity: .7
+
+
+nav#page-nav
+  +span-columns(9 of 12)
+
+  ul
+    list-style-type: none
+    margin: 16px 0 0 0
+    padding: 0
+    text-align: right
+
+  li
+    display: inline
+
+  a
+    display: inline-block
+    text-decoration: none
+    color: #666
+    padding: 30px
+    text-transform: uppercase
+    font-size: em(14)
+
+    &:last-of-type
+      padding-right: 0
+

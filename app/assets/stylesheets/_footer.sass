@@ -1,0 +1,34 @@
+footer#page-footer
+  margin: 30px 0 90px 0
+  #page-footer-inner
+    border-top: 1px solid #eee
+    padding-top: 30px
+    @extend %container
+    +clearfix
+    color: #888
+
+    a
+      color: #888
+      &:hover
+        color: black
+
+    .credits
+      font-weight: $light
+      font-size: em(13)
+
+    .logo
+      float: left
+      margin-right: 20px
+      a
+        display: block
+        +size(83px 28px)
+        +retina-image(logo-startae, 83px 28px)
+        +hide-text
+        opacity: .2
+        &:hover
+          opacity: .7
+    .copy
+      float: left
+      p
+        margin: 0
+        padding: 0

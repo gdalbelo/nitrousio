@@ -1,0 +1,39 @@
+body.type-clean
+  #page-nav
+    display: none
+  #page-header-inner #logo
+    display: block
+    width: 100%
+    margin: 0
+    a
+      margin-left: auto
+      margin-right: auto
+      margin-top: 100px
+
+section.suggest-news
+  @extend %container
+
+  .suggest-news-inner
+    +span-columns(8 of 12)
+    +shift(2)
+    background-color: white
+    margin-top: 30px
+    padding: 50px
+
+  header
+    border-bottom: 1px solid #e5e5e5
+    padding-bottom: 30px
+    h1, h2
+      padding: 0
+      margin: 0
+    h1
+      font-size: 44px
+      line-height: 44px
+      font-weight: bold
+      padding-bottom: 10px
+    h2
+      color: #666
+      font-size: 38px
+      line-height: 38px
+      font-weight: $light
+
